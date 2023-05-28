@@ -2,9 +2,9 @@
 
 ## Code & Page
 
-Code: https://yanker.github.io/webreactiva-pwa/
+Code:
 
-Pwa: https://yanker.github.io/webreactiva-pwa/
+Pwa:
 
 ## Problemas Encontrados
 

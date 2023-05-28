@@ -3,7 +3,7 @@ $(document).ready(function () {
 
   // Carga de Audios
   $.ajax({
-    url: 'https://yanker.github.io/webreactiva-pwa/assets/audios/episodios.json',
+    url: 'assets/audios/episodios.json',
     type: 'POST',
     dataType: 'json',
     success: function (json) {
