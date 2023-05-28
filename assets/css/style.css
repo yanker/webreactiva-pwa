@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.55rem;
+  letter-spacing: -0.015rem;
+  color: #4f5050;
+  background: #f9f9f9;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  padding: 56px 0;
+  margin-bottom: env(safe-area-inset-bottom);
+  margin-top: env(safe-area-inset-top);
+}
+
+.cursor {
+  cursor: pointer !important;
+}
+
+.appHeader {
+  min-height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: env(safe-area-inset-top);
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: #fff;
+  color: #141515;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+}
+
+.appHeader:before {
+  content: '';
+  height: env(safe-area-inset-top);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 99999;
+  background: #1e74fd;
+}
+
+/* Titles */
+
+.appBottomMenu {
+  min-height: 56px;
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #e1e1e1;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.appBottomMenu.no-border {
+  border: 0 !important;
+  box-shadow: 0 !important;
+}
+
+.appBottomMenu.rounded {
+  border-radius: 24px 24px 0 0 !important;
+}
+
+.appBottomMenu.rounded .item:before {
+  display: none;
+}
+
+.appBottomMenu .item {
+  font-size: 9px;
+  letter-spacing: 0;
+  text-align: center;
+  width: 100%;
+  height: 56px;
+  line-height: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.appBottomMenu .item:before {
+  content: '';
+  display: block;
+  height: 2px;
+  border-radius: 0 0 10px 10px;
+  background: transparent;
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  top: 0;
+}
+
+.appBottomMenu .item .col {
+  width: 100%;
+  padding: 0 4px;
+  text-align: center;
+}
+
+.appBottomMenu .item i.icon,
+.appBottomMenu .item ion-icon {
+  display: inline-flex;
+  margin: 1px auto 3px auto;
+  font-size: 26px;
+  line-height: 1em;
+  color: #141515;
+  transition: 0.1s all;
+  display: block;
+  margin-top: 1px;
+  margin-bottom: 3px;
+}
+
+.appBottomMenu .item .action-button {
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
+  margin-left: -5px;
+  margin-right: -5px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 200px;
+  background: #1e74fd;
+}
+
+.appBottomMenu .item .action-button.large {
+  width: 60px;
+  height: 60px;
+  margin-top: -20px;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.appBottomMenu .item .action-button i.icon,
+.appBottomMenu .item .action-button ion-icon {
+  color: #fff !important;
+  margin: 0 !important;
+  line-height: 0 !important;
+}
