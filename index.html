@@ -86,11 +86,14 @@
                         <label class="label" for="episodio">Seleccionar el Episodio a Reproducir</label>
                         <select class="form-control custom-select" id="episodio">
                             <option value="0">Seleccionar</option>
+                            <option value="audio1.mp3">Audio1</option>
+                            <option value="audio2.mp3">Audio2</option>
+                            <option value="audio3.mp3">Audio3</option>
                         </select>
                     </div>
                     <div class="input-wrapper">
                         <audio id="reproductor">
-                            <source src="https://api.spreaker.com/download/episode/53922401/web_reactiva_263.mp3" type='audio/mpeg; codecs="mp3"'>
+                            <source src="assets/audios/audio1.mp3" type='audio/mpeg; codecs="mp3"'>
                         </audio>
                     </div>
                 </div>
@@ -142,6 +145,9 @@
 
     <!-- Js -->
     <script src="assets/js/base.js"></script>
+
+    <!-- Service Worker -->
+    <script src="index.js"></script>
 
 </body>
 
