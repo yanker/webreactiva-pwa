@@ -6,7 +6,7 @@ https://github.com/webreactiva-devs/reto-pwa
 
 ## Code & Page
 
-PWA: https://yanker.github.io/webreactiva-pwa/
+PWA: https://codeq.es/webreactiva/reto-pwa/
 
 CODE: https://github.com/yanker/webreactiva-pwa
 
