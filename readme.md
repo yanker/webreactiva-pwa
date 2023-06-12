@@ -12,7 +12,9 @@ CODE: https://github.com/yanker/webreactiva-pwa
 
 ## Problemas Encontrados
 
-He tenido problemas con el despliegue en github que no encontraba mi manifest, me daba 404
+1º Contienda He tenido problemas con el despliegue en github que no encontraba mi manifest, me daba 404
+
+2º Contienda El problema principal fueron las referencias a los archivos externos, que los tuve que hacer locales
 
 # Referencias Service Worker
 
