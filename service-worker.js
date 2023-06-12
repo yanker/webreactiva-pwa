@@ -1,4 +1,4 @@
-var CACHE = 'cache-only';
+var CACHE = 'network-or-cache';
 const filesCache = [
   'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js',
   'https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js',
@@ -82,7 +82,10 @@ self.addEventListener('install', function (evt) {
 // On fetch, use cache only strategy.
 self.addEventListener('fetch', function (evt) {
   console.log('The service worker is serving the asset.');
-  evt.respondWith(fromCache(evt.request));
+  // Try network and if it fails, go for the cached copy.
+  evt.respondWith(fromNetwork(evt.request, 400).catch(function () {
+    return fromCache(evt.request);
+  }));
 });
 
 // Open a cache and use `addAll()` with an array of assets to add all of them
@@ -91,6 +94,21 @@ self.addEventListener('fetch', function (evt) {
 function precache() {
   return caches.open(CACHE).then(function (cache) {
     return cache.addAll(filesCache);
+  });
+}
+
+// Time limited network request. If the network fails or the response is not
+// served before timeout, the promise is rejected.
+function fromNetwork(request, timeout) {
+  return new Promise(function (fulfill, reject) {
+    // Reject in case of timeout.
+    var timeoutId = setTimeout(reject, timeout);
+    // Fulfill in case of success.
+    fetch(request).then(function (response) {
+      clearTimeout(timeoutId);
+      fulfill(response);
+    // Reject also if network fetch rejects.
+    }, reject);
   });
 }
 
