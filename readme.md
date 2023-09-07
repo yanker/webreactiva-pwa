@@ -25,3 +25,5 @@ El problema principal fueron las referencias a los archivos externos, que los tu
 https://github.com/mdn/serviceworker-cookbook/tree/master
 
 # Cambio Realizado en la máquina PC
+
+# Cambio Realizado en la máquina vivbook
