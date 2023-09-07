@@ -23,3 +23,5 @@ El problema principal fueron las referencias a los archivos externos, que los tu
 # Referencias Service Worker
 
 https://github.com/mdn/serviceworker-cookbook/tree/master
+
+# Cambio Realizado en la máquina PC
