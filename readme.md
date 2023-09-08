@@ -27,3 +27,5 @@ https://github.com/mdn/serviceworker-cookbook/tree/master
 # Cambio Realizado en la máquina PC
 
 # Cambio Realizado en la máquina vivbook
+
+# Cambio realizado desde el Pc hacia servidor a las 10:20
